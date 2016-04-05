@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Beer Database</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="description_default_name"><u>Beer Name</u></string>
+    <string name="description_default_degree">\u2022 Degree: 10°</string>
+    <string name="description_default_alcohol">\u2022 Alcohol: 4.7%</string>
+    <string name="description_default_date">\u2022 Date: 05.04.2016</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.</string>
+
+    <item name="ID_HEADER" type="id"/>
+    <item name="ID_FOOTER" type="id"/>
+
+    <dimen name="description_title_padding">25dp</dimen>
+    <dimen name="description_points_padding_left">20dp</dimen>
+    <dimen name="description_points_padding_topdown">5dp</dimen>
+    <dimen name="description_text_padding">15dp</dimen>
+</resources>

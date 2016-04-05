@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.MainActivity">
+
+    <include layout="@layout/activity_header"/>
+    <include layout="@layout/activity_footer"/>
+
+    <!-- CONTENT -->
+    <RelativeLayout
+        android:id="@+id/content_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ID_HEADER"
+        android:background="@color/grey"
+        android:layout_above="@id/ID_FOOTER">
+
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:id="@+id/description_beerimage"
+            android:src="@drawable/beer_no_image"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/description_name"
+            android:padding="@dimen/description_title_padding"
+            android:layout_alignParentTop="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/description_default_name"
+            android:textColor="@color/light_green"
+            android:textSize="75px"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/description_beerimage" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/description_points_padding_left"
+            android:paddingTop="@dimen/description_points_padding_topdown"
+            android:paddingBottom="@dimen/description_points_padding_topdown"
+            android:text="@string/description_default_degree"
+            android:id="@+id/description_degree"
+            android:layout_below="@+id/description_name"
+            android:layout_toEndOf="@+id/description_beerimage"
+            android:textColor="@color/light_green"
+            android:textSize="60px"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/description_points_padding_left"
+            android:paddingTop="@dimen/description_points_padding_topdown"
+            android:paddingBottom="@dimen/description_points_padding_topdown"
+            android:text="@string/description_default_alcohol"
+            android:id="@+id/description_alcohol"
+            android:textColor="@color/light_green"
+            android:textSize="60px"
+            android:layout_below="@+id/description_degree"
+            android:layout_toEndOf="@+id/description_beerimage" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/description_points_padding_left"
+            android:paddingTop="@dimen/description_points_padding_topdown"
+            android:paddingBottom="@dimen/description_points_padding_topdown"
+            android:text="@string/description_default_date"
+            android:id="@+id/description_date"
+            android:textColor="@color/light_green"
+            android:textSize="60px"
+            android:layout_below="@+id/description_alcohol"
+            android:layout_toEndOf="@+id/description_beerimage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/description_description"
+            android:padding="@dimen/description_text_padding"
+            android:text="@string/lorem_ipsum"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/light_green"
+            android:textSize="50px"
+            android:layout_below="@+id/description_beerimage" />
+    </RelativeLayout>
+</RelativeLayout>

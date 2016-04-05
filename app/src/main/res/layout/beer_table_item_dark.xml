@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey">
+
+    <TableRow
+        android:id="@+id/tableitem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+        <ImageView
+            android:id="@+id/beerIcon"
+            android:layout_gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/beer_icon" />
+
+        <TextView
+            android:id="@+id/tableitem_name"
+            android:layout_gravity="center"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Name"
+            android:textStyle="bold"
+            android:inputType="textCapWords"
+            android:textColor="@color/light_green"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/tableitem_degree"
+            android:layout_gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="10°"
+            android:textColor="@color/light_green"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/tableitem_date"
+            android:layout_gravity="center"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="2015/26/10"
+            android:textColor="@color/light_green"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ImageButton
+            android:id="@+id/tableitem_editButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/edit_beer_icon"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:text="Remove" />
+
+        <ImageButton
+            android:id="@+id/tableitem_removeButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/remove_beer_icon"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:text="Remove" />
+
+    </TableRow>
+
+</RelativeLayout >
