@@ -6,8 +6,13 @@
 
     <color name="black">        #000000</color>
     <color name="red">          #FF0000</color>
-    <color name="not_decided"> #FF0000</color>
     <color name="grey">         #343434</color>
     <color name="light_grey">   #666666</color>
     <color name="light_green">  #86FC5E</color>
+    <color name="shadow_green"> #9BFAAC</color>
+    <color name="green">        #51FF00</color>
+
+    <color name="UNF1"> #FF0000</color>
+    <color name="UNF2"> #0FBDF7</color>
+    <color name="UNF3"> #BD0FF7</color>
 </resources>

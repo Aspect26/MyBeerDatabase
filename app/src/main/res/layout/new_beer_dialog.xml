@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:background="@color/black"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
@@ -9,6 +10,7 @@
         android:inputType="textEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/DarkGreen"
         android:hint="Beer Name" />
 
     <EditText
@@ -16,6 +18,7 @@
         android:inputType="textEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/DarkGreen"
         android:hint="Description" />
 
     <LinearLayout
@@ -28,11 +31,13 @@
             android:layout_height="wrap_content"
             android:text="Degree:"
             android:id="@+id/label_degree"
+            android:theme="@style/DarkGreen"
             android:layout_gravity="center_vertical" />
 
         <NumberPicker
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:theme="@style/DarkGreen"
             android:id="@+id/beer_degree" />
 
         <TextView
@@ -40,12 +45,14 @@
             android:layout_height="wrap_content"
             android:text="Percentage:"
             android:id="@+id/label_percentage"
+            android:theme="@style/DarkGreen"
             android:layout_gravity="center_vertical" />
 
         <NumberPicker
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/beer_percentage"
+            android:theme="@style/DarkGreen"
             android:clickable="false" />
 
         <LinearLayout
@@ -63,18 +70,21 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/beer_type_pale"
                     android:checked="true"
+                    android:theme="@style/DarkGreen"
                     android:text="Pale" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/beer_type_dark"
+                    android:theme="@style/DarkGreen"
                     android:text="Dark" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/beer_type_wheat"
+                    android:theme="@style/DarkGreen"
                     android:text="Wheat" />
 
             </RadioGroup>
@@ -84,6 +94,7 @@
     <DatePicker
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:theme="@style/DarkGreen"
         android:id="@+id/beer_date" />
 
     <LinearLayout
@@ -95,12 +106,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add"
+            android:theme="@style/DarkGreen"
             android:id="@+id/button_addBeer" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cancel"
+            android:theme="@style/DarkGreen"
             android:id="@+id/button_cancel" />
     </LinearLayout>
 

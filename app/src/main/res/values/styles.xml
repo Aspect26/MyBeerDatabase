@@ -2,10 +2,6 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -16,5 +12,24 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- CUSTOM STYLES -->
+    <style name="DarkGreen" parent="AppTheme">
+        <item name="android:textColor">@color/light_green</item>
+        <item name="android:textColorHint">@color/shadow_green</item>
+        <item name="android:textColorPrimary">@color/light_green</item>
+        <item name="android:textColorSecondary">@color/light_green</item>
+        <item name="android:textColorTertiary">@color/light_green</item>
+        <item name="android:editTextColor">@color/light_green</item>
+
+        <item name="colorPrimaryDark">@color/green</item>
+
+        <item name="android:background">@color/light_grey</item>
+
+
+        <item name="colorControlNormal">@color/shadow_green</item>
+        <item name="colorControlActivated">@color/light_green</item>
+        <item name="colorControlHighlight">@color/UNF3</item>
+    </style>
 
 </resources>
