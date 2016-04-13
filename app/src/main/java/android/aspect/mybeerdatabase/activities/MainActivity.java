@@ -6,6 +6,7 @@ import android.aspect.mybeerdatabase.R;
 import android.aspect.mybeerdatabase.database.Beer;
 import android.aspect.mybeerdatabase.database.BeerDatabase;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
@@ -80,6 +81,15 @@ public class MainActivity extends AppCompatActivity {
                 builder.setPositiveButton("Yes", new YesNoDialogListener(beer));
                 builder.setNegativeButton("No", new YesNoDialogListener(beer));
                 builder.show();
+            }
+        });
+
+        ((ImageButton)child.findViewById(R.id.tableitem_editButton)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, DescriptionActivity.class);
+                // myIntent.putExtra("key", value);
+                MainActivity.this.startActivity(myIntent);
             }
         });
 

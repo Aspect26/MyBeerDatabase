@@ -15,6 +15,8 @@
 
     <!-- CUSTOM STYLES -->
     <style name="DarkGreen" parent="AppTheme">
+        <item name="android:background">@color/black</item>
+
         <item name="android:textColor">@color/light_green</item>
         <item name="android:textColorHint">@color/shadow_green</item>
         <item name="android:textColorPrimary">@color/light_green</item>
@@ -22,14 +24,17 @@
         <item name="android:textColorTertiary">@color/light_green</item>
         <item name="android:editTextColor">@color/light_green</item>
 
-        <item name="colorPrimaryDark">@color/green</item>
-
-        <item name="android:background">@color/light_grey</item>
-
-
         <item name="colorControlNormal">@color/shadow_green</item>
         <item name="colorControlActivated">@color/light_green</item>
-        <item name="colorControlHighlight">@color/UNF3</item>
+        <item name="colorControlHighlight">@color/green</item>
+
+        <item name="colorAccent">@color/red</item>
+
+        <item name="colorPrimaryDark">@color/green</item>
+    </style>
+
+    <style name="DarkGreen.Button" >
+        <item name="android:background">@drawable/button_darkgreen</item>
     </style>
 
 </resources>

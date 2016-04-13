@@ -36,7 +36,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/description_default_name"
             android:textColor="@color/light_green"
-            android:textSize="75px"
+            android:textSize="25dp"
             android:textStyle="bold"
             android:layout_toEndOf="@+id/description_beerimage" />
 
@@ -51,7 +51,7 @@
             android:layout_below="@+id/description_name"
             android:layout_toEndOf="@+id/description_beerimage"
             android:textColor="@color/light_green"
-            android:textSize="60px"/>
+            android:textSize="15dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -62,7 +62,7 @@
             android:text="@string/description_default_alcohol"
             android:id="@+id/description_alcohol"
             android:textColor="@color/light_green"
-            android:textSize="60px"
+            android:textSize="15dp"
             android:layout_below="@+id/description_degree"
             android:layout_toEndOf="@+id/description_beerimage" />
 
@@ -75,7 +75,7 @@
             android:text="@string/description_default_date"
             android:id="@+id/description_date"
             android:textColor="@color/light_green"
-            android:textSize="60px"
+            android:textSize="15dp"
             android:layout_below="@+id/description_alcohol"
             android:layout_toEndOf="@+id/description_beerimage" />
 
@@ -89,7 +89,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:textColor="@color/light_green"
-            android:textSize="50px"
+            android:textSize="12dp"
             android:layout_below="@+id/description_beerimage" />
     </RelativeLayout>
 </RelativeLayout>
