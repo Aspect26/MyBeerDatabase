@@ -21,4 +21,17 @@
     <dimen name="description_points_padding_left">20dp</dimen>
     <dimen name="description_points_padding_topdown">5dp</dimen>
     <dimen name="description_text_padding">15dp</dimen>
+
+    <string name="changeLog">
+        "
+        Build 10 (18.04.2016):
+            - ChangeLog is now shown properly
+            - ChangeLog now has Back button
+
+        Build 3 (18.04.2016):
+            - All buttons now have pressed animation
+            - Added changeLog functionality
+        "
+
+    </string>
 </resources>

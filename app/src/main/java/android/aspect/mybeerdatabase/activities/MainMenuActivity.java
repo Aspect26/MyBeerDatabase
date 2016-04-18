@@ -25,6 +25,14 @@ public class MainMenuActivity extends AppCompatActivity {
             }
         });
 
+        ((Button)findViewById(R.id.mainmenubutton_changelog)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainMenuActivity.this, ChangelogActivity.class);
+                MainMenuActivity.this.startActivity(myIntent);
+            }
+        });
+
         ((Button)findViewById(R.id.mainmenubutton_exit)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

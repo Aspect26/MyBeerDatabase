@@ -35,6 +35,14 @@
             android:padding="5dp"
             android:background="@drawable/listtable_darkgreen">
         </TableLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Main Menu"
+            android:id="@+id/button_mainmenu"
+            android:background="@drawable/buttonbottom_darkgreen"  />
+
     </LinearLayout>
 
 </RelativeLayout>

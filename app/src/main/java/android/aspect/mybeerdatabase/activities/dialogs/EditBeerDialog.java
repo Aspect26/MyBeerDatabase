@@ -69,7 +69,7 @@ public class EditBeerDialog extends DialogFragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle instance) {
-        View view = inflater.inflate(R.layout.edit_beer_dialog, container);
+        View view = inflater.inflate(R.layout.dialog_edit_beer, container);
         getDialog().setTitle("Add Beer");
 
         nameText = (EditText) view.findViewById(R.id.beer_name);

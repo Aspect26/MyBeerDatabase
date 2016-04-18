@@ -34,7 +34,7 @@
     </style>
 
     <style name="DarkGreen.Button" >
-        <item name="android:background">@drawable/button_darkgreen</item>
+        <item name="android:background">@drawable/button_darkgreen_noaction</item>
     </style>
 
 </resources>

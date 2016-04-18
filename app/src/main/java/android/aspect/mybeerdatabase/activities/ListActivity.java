@@ -42,6 +42,13 @@ public class ListActivity extends AppCompatActivity {
             }
         });
 
+        ((Button)findViewById(R.id.button_mainmenu)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         database.load();
         recreateBeerList();
     }

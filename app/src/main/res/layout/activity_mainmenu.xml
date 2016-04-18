@@ -27,7 +27,7 @@
             android:layout_width="256dp"
             android:layout_height="56dp"
             android:text="Beers"
-            android:background="@drawable/button_selector_darkgreen"
+            android:background="@drawable/button_darkgreen"
             android:layout_margin="@dimen/mainmenu_buttons_margin"/>
 
         <Button
@@ -35,7 +35,7 @@
             android:layout_width="256dp"
             android:layout_height="56dp"
             android:text="Settings"
-            android:background="@drawable/button_selector_darkgreen"
+            android:background="@drawable/button_darkgreen"
             android:layout_margin="@dimen/mainmenu_buttons_margin"/>
 
         <Button
@@ -43,7 +43,7 @@
             android:layout_width="256dp"
             android:layout_height="56dp"
             android:text="About"
-            android:background="@drawable/button_selector_darkgreen"
+            android:background="@drawable/button_darkgreen"
             android:layout_margin="@dimen/mainmenu_buttons_margin"/>
 
         <Button
@@ -51,7 +51,7 @@
             android:layout_width="256dp"
             android:layout_height="56dp"
             android:text="ChangeLog"
-            android:background="@drawable/button_selector_darkgreen"
+            android:background="@drawable/button_darkgreen"
             android:layout_margin="@dimen/mainmenu_buttons_margin"/>
 
         <Button
@@ -59,14 +59,14 @@
             android:layout_width="256dp"
             android:layout_height="56dp"
             android:text="Exit"
-            android:background="@drawable/button_selector_darkgreen"
+            android:background="@drawable/button_darkgreen"
             android:layout_margin="@dimen/mainmenu_buttons_margin"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/light_green"
-            android:text="Build: 2"/>
+            android:text="Build: 7"/>
 
     </LinearLayout>
 </RelativeLayout>
