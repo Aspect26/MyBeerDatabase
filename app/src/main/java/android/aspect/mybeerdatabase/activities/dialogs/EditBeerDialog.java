@@ -5,13 +5,12 @@ package android.aspect.mybeerdatabase.activities.dialogs;
  */
 import android.app.Activity;
 import android.aspect.mybeerdatabase.R;
-import android.aspect.mybeerdatabase.activities.MainActivity;
+import android.aspect.mybeerdatabase.activities.ListActivity;
 import android.aspect.mybeerdatabase.database.Beer;
 import android.aspect.mybeerdatabase.database.BeerDatabase;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -140,7 +139,7 @@ public class EditBeerDialog extends DialogFragment{
                     database.changeBeer(beer, new Beer(name, description, dateAdded, degree, percentage, type, 0.5, 0, imagePath));
                 }
 
-                ((MainActivity) getActivity()).recreateBeerList();
+                ((ListActivity) getActivity()).recreateBeerList();
                 thisDialog.dismiss();
             }
         });

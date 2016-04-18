@@ -11,6 +11,8 @@
     <color name="light_green">  #86FC5E</color>
     <color name="shadow_green"> #9BFAAC</color>
     <color name="green">        #51FF00</color>
+    <color name="dark_green_1"> #006000</color>
+    <color name="dark_green_2"> #003000</color>
 
     <color name="UNF1"> #FF0000</color>
     <color name="UNF2"> #0FBDF7</color>

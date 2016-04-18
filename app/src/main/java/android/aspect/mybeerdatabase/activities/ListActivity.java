@@ -9,7 +9,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -21,7 +20,7 @@ import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class ListActivity extends AppCompatActivity {
     private BeerDatabase database;
     private TableLayout beerTable;
     private static boolean dark = true;
@@ -85,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             ((ImageView) child.findViewById(R.id.beerIcon)).setImageBitmap(BitmapFactory.decodeFile(beer.ImagePath));
         }
 
-        final MainActivity thisActivity = this;
+        final ListActivity thisActivity = this;
         ((ImageButton)child.findViewById(R.id.tableitem_removeButton)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,9 +110,9 @@ public class MainActivity extends AppCompatActivity {
         child.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(MainActivity.this, DescriptionActivity.class);
+                Intent myIntent = new Intent(ListActivity.this, DescriptionActivity.class);
                 myIntent.putExtra("beer", beer);
-                MainActivity.this.startActivity(myIntent);
+                ListActivity.this.startActivity(myIntent);
             }
         });
 
