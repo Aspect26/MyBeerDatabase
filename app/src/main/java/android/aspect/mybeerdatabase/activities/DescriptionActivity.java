@@ -1,16 +1,11 @@
 package android.aspect.mybeerdatabase.activities;
 
 import android.aspect.mybeerdatabase.R;
-import android.aspect.mybeerdatabase.activities.dialogs.AddBeerDialog;
 import android.aspect.mybeerdatabase.database.Beer;
 import android.aspect.mybeerdatabase.database.BeerDatabase;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.Icon;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TextView;

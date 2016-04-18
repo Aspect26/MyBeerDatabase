@@ -1,7 +1,7 @@
 package android.aspect.mybeerdatabase.activities;
 
 import android.app.AlertDialog;
-import android.aspect.mybeerdatabase.activities.dialogs.AddBeerDialog;
+import android.aspect.mybeerdatabase.activities.dialogs.EditBeerDialog;
 import android.aspect.mybeerdatabase.R;
 import android.aspect.mybeerdatabase.database.Beer;
 import android.aspect.mybeerdatabase.database.BeerDatabase;
@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FragmentManager fm = getSupportFragmentManager();
-                AddBeerDialog addBeerDialog = new AddBeerDialog();
-                addBeerDialog.setDatabase(database);
-                addBeerDialog.show(fm, "fragment_edit_name");
+                EditBeerDialog editBeerDialog = new EditBeerDialog();
+                editBeerDialog.setDatabase(database);
+                editBeerDialog.show(fm, "fragment_edit_name");
             }
         });
 
@@ -86,6 +86,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ((ImageButton)child.findViewById(R.id.tableitem_editButton)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        child.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, DescriptionActivity.class);

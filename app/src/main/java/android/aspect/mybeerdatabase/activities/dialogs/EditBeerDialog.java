@@ -4,15 +4,12 @@ package android.aspect.mybeerdatabase.activities.dialogs;
  * Created by Aspect on 3/27/2016.
  */
 import android.app.Activity;
-import android.app.Notification;
 import android.aspect.mybeerdatabase.R;
 import android.aspect.mybeerdatabase.activities.MainActivity;
 import android.aspect.mybeerdatabase.database.Beer;
 import android.aspect.mybeerdatabase.database.BeerDatabase;
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -22,7 +19,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -31,7 +27,7 @@ import java.util.Calendar;
 import java.util.Date;
 // ...
 
-public class AddBeerDialog extends DialogFragment{
+public class EditBeerDialog extends DialogFragment{
 
     private EditText nameText;
     private EditText descriptionText;
@@ -47,7 +43,7 @@ public class AddBeerDialog extends DialogFragment{
 
     static final int PICK_IMAGE = 6435;
 
-    public AddBeerDialog() {
+    public EditBeerDialog() {
         int count = 100;
         int beginning = 25;
         percentages = new String[count];
@@ -63,7 +59,7 @@ public class AddBeerDialog extends DialogFragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle instance) {
-        View view = inflater.inflate(R.layout.new_beer_dialog, container);
+        View view = inflater.inflate(R.layout.edit_beer_dialog, container);
         getDialog().setTitle("Add Beer");
 
         nameText = (EditText) view.findViewById(R.id.beer_name);
@@ -84,7 +80,7 @@ public class AddBeerDialog extends DialogFragment{
         percentageSpinner.setDisplayedValues(percentages);
         percentageSpinner.setValue(22);
 
-        final AddBeerDialog thisDialog = this;
+        final EditBeerDialog thisDialog = this;
 
         view.findViewById(R.id.imageChooser).setOnClickListener(new View.OnClickListener(){
             @Override
