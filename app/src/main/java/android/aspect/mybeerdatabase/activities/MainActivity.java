@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             child = getLayoutInflater().inflate(R.layout.beer_table_item_light, null);
         else
             child = getLayoutInflater().inflate(R.layout.beer_table_item_dark, null);
+        dark = !dark;
 
         ((TextView)child.findViewById(R.id.tableitem_name)).setText(beer.Name);
         ((TextView)child.findViewById(R.id.tableitem_degree)).setText(String.valueOf(beer.Degree) + "°");
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, DescriptionActivity.class);
-                // myIntent.putExtra("key", value);
+                myIntent.putExtra("beer", beer);
                 MainActivity.this.startActivity(myIntent);
             }
         });

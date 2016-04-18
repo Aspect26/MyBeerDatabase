@@ -5,6 +5,7 @@ import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,7 +16,7 @@ import java.util.Date;
  * Created by Aspect on 3/27/2016.
  */
 
-public class Beer {
+public class Beer implements Serializable{
     public enum BeerType{
         Pale,
         Dark,

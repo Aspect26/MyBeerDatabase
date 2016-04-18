@@ -57,7 +57,7 @@
             android:clickable="false" />
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:theme="@style/DarkGreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -92,8 +92,14 @@
                     android:theme="@style/DarkGreen"
                     android:textColor="@color/light_green"
                     android:text="Wheat" />
-
             </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="148dp"
+                android:src="@drawable/beer_no_image"
+                android:id="@+id/imageChooser" />
+
         </LinearLayout>
     </LinearLayout>
 
