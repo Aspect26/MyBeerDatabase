@@ -7,6 +7,7 @@ import android.aspect.mybeerdatabase.database.Beer;
 import android.aspect.mybeerdatabase.database.BeerDatabase;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
@@ -14,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TableLayout;
@@ -31,10 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
         database = new BeerDatabase(getFilesDir().getAbsolutePath());
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        ((Button)findViewById(R.id.button_addNewBeer)).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 FragmentManager fm = getSupportFragmentManager();
                 EditBeerDialog editBeerDialog = new EditBeerDialog();
                 editBeerDialog.setDatabase(database);
@@ -65,13 +66,24 @@ public class MainActivity extends AppCompatActivity {
         ((TextView)child.findViewById(R.id.tableitem_degree)).setText(String.valueOf(beer.Degree) + "°");
         ((TextView)child.findViewById(R.id.tableitem_date)).setText(beer.getFormattedDate());
 
-        int imageId = R.drawable.beer_icon;
-        switch(beer.Type){
-            case Pale: imageId = R.drawable.beer_icon; break;
-            case Dark: imageId = R.drawable.darkbeer_icon; break;
-            case Wheat:imageId = R.drawable.wheatbeer_icon; break;
+        if(beer.ImagePath == null) {
+            int imageId = R.drawable.beer_icon;
+            switch (beer.Type) {
+                case Pale:
+                    imageId = R.drawable.beer_icon;
+                    break;
+                case Dark:
+                    imageId = R.drawable.darkbeer_icon;
+                    break;
+                case Wheat:
+                    imageId = R.drawable.wheatbeer_icon;
+                    break;
+            }
+            ((ImageView) child.findViewById(R.id.beerIcon)).setImageResource(imageId);
         }
-        ((ImageView)child.findViewById(R.id.beerIcon)).setImageResource(imageId);
+        else{
+            ((ImageView) child.findViewById(R.id.beerIcon)).setImageBitmap(BitmapFactory.decodeFile(beer.ImagePath));
+        }
 
         final MainActivity thisActivity = this;
         ((ImageButton)child.findViewById(R.id.tableitem_removeButton)).setOnClickListener(new View.OnClickListener() {

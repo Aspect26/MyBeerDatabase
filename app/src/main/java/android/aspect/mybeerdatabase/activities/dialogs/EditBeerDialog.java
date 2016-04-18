@@ -11,6 +11,7 @@ import android.aspect.mybeerdatabase.database.BeerDatabase;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -167,7 +168,7 @@ public class EditBeerDialog extends DialogFragment{
                 cursor.close();
 
                 this.imagePath = picturePath;
-                this.image.setImageBitmap(BitmapFactory.decodeFile(beer.ImagePath));
+                this.image.setImageBitmap(BitmapFactory.decodeFile(picturePath));
             }
         }
     }

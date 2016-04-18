@@ -12,30 +12,29 @@
     <include layout="@layout/activity_footer"/>
 
     <!-- CONTENT -->
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/content_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_below="@id/ID_HEADER"
         android:theme="@style/DarkGreen"
         android:layout_above="@id/ID_FOOTER">
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add New Beer"
+            android:id="@+id/button_addNewBeer"
+            android:background="@drawable/buttontop_darkgreen"  />
+
         <TableLayout
             android:id="@+id/beer_table"
-            android:layout_gravity="top|end"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </TableLayout>
-
-        <!-- FLOAT BUTTON -->
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:src="@drawable/beer_icon"
-            app:backgroundTint="@android:color/black"/>
-    </RelativeLayout>
+            android:padding="5dp"
+            android:background="@drawable/listtable_darkgreen">
+        </TableLayout>
+    </LinearLayout>
 
 </RelativeLayout>
