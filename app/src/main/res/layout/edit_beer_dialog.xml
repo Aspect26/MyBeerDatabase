@@ -98,7 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="148dp"
                 android:src="@drawable/beer_no_image"
-                android:id="@+id/imageChooser" />
+                android:id="@+id/beer_image" />
 
         </LinearLayout>
     </LinearLayout>

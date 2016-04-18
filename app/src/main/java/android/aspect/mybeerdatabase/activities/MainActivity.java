@@ -88,12 +88,15 @@ public class MainActivity extends AppCompatActivity {
         ((ImageButton)child.findViewById(R.id.tableitem_editButton)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                FragmentManager fm = getSupportFragmentManager();
+                EditBeerDialog editBeerDialog = new EditBeerDialog();
+                editBeerDialog.setDatabase(database);
+                editBeerDialog.setBeer(beer);
+                editBeerDialog.show(fm, "fragment_edit_name");
             }
         });
 
         child.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(MainActivity.this, DescriptionActivity.class);

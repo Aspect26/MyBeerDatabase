@@ -37,6 +37,13 @@ public class BeerDatabase implements Iterable<Beer>{
         save();
     }
 
+    public void changeBeer(Beer oldBeer, Beer newBeer){
+        this.beers.remove(oldBeer);
+        this.beers.add(newBeer);
+        sort();
+        save();
+    }
+
     public int size(){
         return beers.size();
     }

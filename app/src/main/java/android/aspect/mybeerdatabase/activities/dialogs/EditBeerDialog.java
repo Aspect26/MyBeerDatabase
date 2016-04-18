@@ -10,6 +10,7 @@ import android.aspect.mybeerdatabase.database.Beer;
 import android.aspect.mybeerdatabase.database.BeerDatabase;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -17,12 +18,15 @@ import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 // ...
@@ -31,13 +35,15 @@ public class EditBeerDialog extends DialogFragment{
 
     private EditText nameText;
     private EditText descriptionText;
+    private ImageView image;
     private DatePicker dateAddedPicker;
     private NumberPicker degreeSpinner;
     private NumberPicker percentageSpinner;
     private RadioGroup typeGetter;
+    private Button editButton;
     private String imagePath;
-
     private BeerDatabase database;
+    private Beer beer;
 
     private static String[] percentages;
 
@@ -56,6 +62,10 @@ public class EditBeerDialog extends DialogFragment{
         this.database = database;
     }
 
+    public void setBeer(Beer beer) {
+        this.beer = beer;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle instance) {
@@ -64,10 +74,15 @@ public class EditBeerDialog extends DialogFragment{
 
         nameText = (EditText) view.findViewById(R.id.beer_name);
         descriptionText = (EditText) view.findViewById(R.id.beer_description);
+        image = (ImageView) view.findViewById(R.id.beer_image);
         dateAddedPicker = (DatePicker) view.findViewById(R.id.beer_date);
         degreeSpinner = (NumberPicker) view.findViewById(R.id.beer_degree);
         percentageSpinner = (NumberPicker) view.findViewById(R.id.beer_percentage);
         typeGetter = (RadioGroup) view.findViewById(R.id.beer_type);
+        editButton = (Button) view.findViewById(R.id.button_addBeer);
+
+        if(beer != null)
+            editButton.setText("Edit");
 
         degreeSpinner.setMaxValue(100);
         degreeSpinner.setValue(10);
@@ -80,9 +95,13 @@ public class EditBeerDialog extends DialogFragment{
         percentageSpinner.setDisplayedValues(percentages);
         percentageSpinner.setValue(22);
 
+        //set initial values
+        if(beer != null)
+            setInitialValues();
+
         final EditBeerDialog thisDialog = this;
 
-        view.findViewById(R.id.imageChooser).setOnClickListener(new View.OnClickListener(){
+        view.findViewById(R.id.beer_image).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
@@ -112,8 +131,14 @@ public class EditBeerDialog extends DialogFragment{
                 else
                     type = Beer.BeerType.Wheat;
 
-                Beer beer = new Beer(name, description, dateAdded, degree, percentage, type, 0.5, 0, imagePath);
-                database.add(beer);
+                // Add new beer or edit passed beer
+                if(beer == null){
+                    database.add(new Beer(name, description, dateAdded, degree, percentage, type, 0.5, 0, imagePath));
+                }
+                else{
+                    database.changeBeer(beer, new Beer(name, description, dateAdded, degree, percentage, type, 0.5, 0, imagePath));
+                }
+
                 ((MainActivity) getActivity()).recreateBeerList();
                 thisDialog.dismiss();
             }
@@ -142,6 +167,7 @@ public class EditBeerDialog extends DialogFragment{
                 cursor.close();
 
                 this.imagePath = picturePath;
+                this.image.setImageBitmap(BitmapFactory.decodeFile(beer.ImagePath));
             }
         }
     }
@@ -155,5 +181,17 @@ public class EditBeerDialog extends DialogFragment{
         calendar.set(year, month, day);
 
         return calendar.getTime();
+    }
+
+    private void setInitialValues(){
+        this.nameText.setText(beer.Name);
+        this.descriptionText.setText(beer.Description);
+        this.degreeSpinner.setValue(beer.Degree);
+        this.percentageSpinner.setValue(Arrays.asList(percentages).indexOf(beer.Percentage));
+        this.image.setImageBitmap(BitmapFactory.decodeFile(beer.ImagePath));
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(beer.DateAdded);
+        this.dateAddedPicker.updateDate(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH));
     }
 }
