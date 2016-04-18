@@ -14,8 +14,8 @@
         laborum.
     </string>
 
-    <item name="ID_HEADER" type="id"/>
-    <item name="ID_FOOTER" type="id"/>
+    <item name="ID_HEADER" type="id" />
+    <item name="ID_FOOTER" type="id" />
 
     <dimen name="description_title_padding">25dp</dimen>
     <dimen name="description_points_padding_left">20dp</dimen>
@@ -24,14 +24,19 @@
 
     <string name="changeLog">
         "
-        Build 10 (18.04.2016):
+        Build 14 (18.04.2016)
+            - About dialog is now functional
+            - Added application intro
+
+        Build 10 (18.04.2016)
             - ChangeLog is now shown properly
             - ChangeLog now has Back button
 
-        Build 3 (18.04.2016):
+        Build 3 (18.04.2016)
             - All buttons now have pressed animation
             - Added changeLog functionality
         "
 
     </string>
+    <string name="title_activity_about">AboutActivity</string>
 </resources>
