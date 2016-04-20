@@ -24,6 +24,12 @@
 
     <string name="changeLog">
         "
+        Build 27 (19.04.2016)
+            - Beer list -> edit and remove buttons are now custom
+            - Beer list -> list item background new design
+            - Beer list -> now scrollable
+            - Beer list -> now has padding
+
         Build 14 (18.04.2016)
             - About dialog is now functional
             - Added application intro

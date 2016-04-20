@@ -16,6 +16,7 @@
         android:id="@+id/content_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="20dp"
         android:orientation="vertical"
         android:layout_below="@id/ID_HEADER"
         android:theme="@style/DarkGreen"
@@ -28,13 +29,22 @@
             android:id="@+id/button_addNewBeer"
             android:background="@drawable/buttontop_darkgreen"  />
 
-        <TableLayout
-            android:id="@+id/beer_table"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:background="@drawable/listtable_darkgreen">
-        </TableLayout>
+        <ScrollView
+            android:id="@+id/list_scrollarea"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none"
+            android:layout_weight="1" >
+
+            <TableLayout
+                android:id="@+id/beer_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:background="@drawable/listtable_darkgreen">
+            </TableLayout>
+
+        </ScrollView>
 
         <Button
             android:layout_width="match_parent"

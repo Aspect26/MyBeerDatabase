@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
@@ -92,7 +93,7 @@ public class ListActivity extends AppCompatActivity {
         }
 
         final ListActivity thisActivity = this;
-        ((ImageButton)child.findViewById(R.id.tableitem_removeButton)).setOnClickListener(new View.OnClickListener() {
+        ((Button)child.findViewById(R.id.tableitem_removeButton)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(thisActivity);
@@ -103,7 +104,7 @@ public class ListActivity extends AppCompatActivity {
             }
         });
 
-        ((ImageButton)child.findViewById(R.id.tableitem_editButton)).setOnClickListener(new View.OnClickListener() {
+        ((Button)child.findViewById(R.id.tableitem_editButton)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager fm = getSupportFragmentManager();
